@@ -446,9 +446,33 @@ input[type="submit"]{
   border: 0;
   cursor:pointer;
   transition: .4s;
+  margin: auto;
 }
 
 input[type="submit"]:hover{
   background: #59a7ec;
   transition: .4s;
+}
+
+.success {
+  color: #fff;
+  background: : #44BE75;
+  padding: 15px 50px;
+  margin-bottom: 20px;
+  position: fixed;
+  top: 90%;
+  right: 100px;
+  display: none;
+}
+
+.contacto-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.contacto-info img{
+  width: 28px;
+  vertical-align: middle;
+  margin-right: 10px;
 }
