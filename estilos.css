@@ -1,0 +1,454 @@
+body{
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor{
+  width: 90%;
+  max-width: 1300px;
+  margin:auto;
+}
+
+header{
+  height: 100vh;
+  /*Esta linea hace que cargue una imagen de fondo y le mete degradado celeste, ademas hace que no se repita.*/
+  background: linear-gradient(rgba(84,93,220,.9),rgba(96,171,245,.9)),url(imagenes/fondo-home.jpg) left no-repeat;
+  /*Esto adapta la foto al tamano del fondo*/
+  background-size: cover;
+}
+
+#contenedor-menu{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+header .logo{
+  color: white;
+  font-size: 20px;
+  font-family: 'Righteous', cursive;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 21px;
+}
+
+nav ul li{
+  margin-right: 23px;
+  list-style: none;
+  color:white;
+}
+
+.contenedor-titulo{
+  display: flex;
+  justify-content: center;
+  margin: 18vh 0;
+}
+
+
+
+.contenedor-titulo h1{
+  font-size: 60px;
+  color: white;
+  margin-bottom: 0;
+}
+
+.contenedor-titulo h2{
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contenedor-titulo a{
+  width: 115px;
+  display: inline-block;
+  background: #5cb8ff;
+  font-size: 14px;
+  color:white;
+  padding: 14px 24px;
+  border-radius: 5px;
+}
+.contenedor-titulo .titulo{
+  text-align: center;
+}
+
+/*Esta parte define el estilo para seccion 'Sobre mi'*/
+#about h3 {
+  text-align: center;
+  font-size: 55px;
+  font-weight: normal;
+}
+
+#about img{
+  width: 378px;
+}
+
+#about .contenido{
+  display: flex;
+  justify-content: space-around;
+}
+
+#about .about-text{
+  width: 42%;
+}
+
+#about a{
+  background: #5cb8ff;
+  font-size: 14px;
+  color: white;
+  display: inline-block;
+  margin-top: 12px;
+  padding: 15px 0;
+  width: 179px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#servicios h3{
+  text-align: center;
+  font-size: 55px;
+  font-weight: normal; /*quita negrita*/
+}
+
+/*Esta dos secciones siguientes le dan el color y el degradado a los contenedores
+de la sección servicios*/
+.contenedor-servicios .violeta{
+  background-image: linear-gradient(to top, #5055df, #6d68f3);
+  box-shadow: 0 12px 30px 0 rgba(80, 85, 223, 37);
+}
+.contenedor-servicios .celeste{
+  background-image: linear-gradient(to top, #40a8f9, #5cb8ff);
+  box-shadow: 0 12px 30px 0 rgba(86, 163, 222, .3);
+}
+
+/*Define el orden en que se ajustaran los elementos de la sección servicios*/
+.contenedor-servicios{
+  display: flex; /*Pone todo en linea*/
+  justify-content: space-around;
+  flex-wrap: wrap; /*Si los elementos se salen del area, los alinea hacia trabajos
+  de manera que no haya que arrastrar a los lados*/
+  color: white;
+}
+
+/*Los estilos de los contenedores de todos los items de la sección servicios */
+.contenedor-servicios .servicio{
+  padding: 34px 30px 34px 30px;
+  border-radius: 10px;
+  width: 24%;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.contenedor-servicios h4 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.contenedor-servicios p {
+  opacity: .8;
+  margin-bottom: 20px;
+  height: 194px; /*altura fija para los parrafos
+  Lo cual hace que los iconos queden al mismo nivel
+  porque todos los parrafos terminan en la misma altura*/
+}
+
+.contenedor-servicios .icono{
+  float: right;
+}
+
+.contenedor-servicios .waves{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#trabajos h3{
+  font-size: 55px;
+  font-weight: normal;
+  text-align: center;
+}
+#trabajos p{
+  text-align: center;
+}
+#trabajos img {
+  transition: scale(1);
+  transition: .3s;
+}
+
+#trabajos img:hover{
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+/*El boton de navegacion del slider*/
+.owl-nav button{
+  color:#5cb8ff !important;
+  margin: 0 46px !important;
+  font-size: 59px !important;
+}
+
+/*Quita los botones que salian bajo el slider*/
+.owl-dots {
+  display: none;
+}
+
+.owl-nav button:hover{
+  background: none !important;
+}
+
+
+
+#trabajar-conmigo h3{
+  font-size: 55px;
+  text-align: center;
+  font-weight: normal;
+}
+
+#trabajar-conmigo .contenedor-trabajar{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#trabajar-conmigo .item{
+  width: 28%;
+  text-align: center;
+}
+
+#trabajar-conmigo ul li{
+  list-style: none;
+}
+
+/*este nth-child le aplica el estilo al item #2 del ul
+  en este caso, al item que lleva el titulo del contenedor*/
+#trabajar-conmigo ul li:nth-child(2){
+  font-weight: 600;
+  font-size: 19px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+#trabajar-conmigo ul li:nth-child(3){
+  line-height: 31px;
+}
+
+#wordpress h3{
+  font-size: 55px;
+  text-align: center;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 30px;
+}
+
+#wordpress p{
+  text-align: center;
+}
+
+/*Con align-items se logra que el texto de la derecha esté al centro de
+la imagen de la izquierda*/
+#wordpress .contenedor-wordpress{
+  display: flex;
+  align-items: center;
+}
+
+#wordpress .wordpress-texto{
+  width: 41%;
+  margin: auto; /*Esto centra bonito el texto*/
+}
+
+#wordpress .wordpress-texto ul li{
+  line-height: 35px;
+}
+
+#hosting h3{
+  text-align: center;
+  font-size: 55px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+#hosting p{
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+
+#hosting .contenedor-info{
+  display: flex;
+  margin-top: 30px;
+}
+
+#hosting .contenedor-info .info {
+  width: 48%;
+  margin: auto;
+}
+
+#hosting .contenedor-info .grande{
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+#hosting .contenedor-info ul li{
+  list-style: none;
+}
+
+#hosting .iconos {
+  line-height: 50px;
+}
+
+#hosting .check {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+#blog h3{
+  font-size: 55px;
+  font-weight: normal;
+  text-align: center;
+}
+
+#blog {
+  background: #F9FAFC;
+}
+
+#blog .contenido{
+  display: flex;
+  justify-content: space-around;
+}
+
+#blog .blog-single{
+  width:400px;
+  box-shadow: 1px 1px 14px #ccc;
+}
+
+#blog .contenido img{
+  width: 100%;
+}
+
+#blog .blog-box-content{
+  background: #fff;
+  padding: 20px;
+}
+#blog .contenido h4{
+  font-weight: 600;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+#blog p{
+  color: #5a6169;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#blog .blog-box-content a{
+  width: 105px;
+  border-radius: 5px;
+  background: #5cb8ff;
+  padding: 15px 16px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 12px;
+  display: inline-block;
+  text-align: center;
+  transition: .3s;
+}
+
+#blog .blog-box-content a:hover{
+  background: #59a7ec;
+  transition: .3s;
+}
+
+#blog .remarketing{
+  height: 276px;
+}
+
+#cta {
+  background: linear-gradient(rgba(84,93,220,.9),rgba(96,171,245,.9));
+  text-align: center;
+  padding: 50px 0;
+  margin-top: 40px;
+}
+#cta h3{
+  font-size: 23px;
+  color: #fff;
+}
+
+#cta a{
+  border-radius: 5px;
+  background: #5cb8ff;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  width: 157px;
+  margin-top: 12px;
+  display: inline-block;
+  padding: 10px 0;
+  letter-spacing: .5px;
+}
+
+#contacto h3 {
+  font-size: 55px;
+  font-weight: normal;
+  text-align: center;
+}
+
+#contacto .form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 77%;
+  margin: auto;
+}
+
+textarea{
+  padding: 18px 0;
+  border: 0;
+  border-bottom: 1px solid #5cb8ff;
+  font-size: 17px;
+  color: #212121;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+input[type="text"], input[type="email"]{
+    width: 49%;
+    border:0;
+    margin-bottom: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #5cb8ff;
+    font-size: 17px;
+    color: #212121;
+}
+input[type="text"]:focus,input[type="email"]:focus, textarea:focus{
+  outline: 0; /*Esto quita el borde azul de los input cuando están seleccionados*/
+  border-bottom: 1px solid #0387d1;
+}
+
+input[type="submit"]{
+  width: 165px;
+  border-radius: 5px;
+  background: #5cb8ff;
+  padding: 15px 0;
+  font-size: 14px;
+  color: #fff;
+  box-shadow: 0px 12px 12px 0px rgba(41, 45, 172, .18);
+  display: inline-block;
+  border: 0;
+  cursor:pointer;
+  transition: .4s;
+}
+
+input[type="submit"]:hover{
+  background: #59a7ec;
+  transition: .4s;
+}
