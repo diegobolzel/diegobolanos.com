@@ -291,9 +291,9 @@
           <div class="contenedor">
             <h3>Contacto</h3>
             <form class="form" action="mienvio_formulario.php" method="post" enctype="multipart/form-data">
-              <input placeholder="Nombre" type="text" name="nombre">
-              <input placeholder="Email" type="email" name="email">
-              <textarea placeholder="Mensaje" name="mensaje"></textarea>
+              <input placeholder="Nombre" type="text" name="nombre" id="itNombre">
+              <input placeholder="Email" type="email" name="email" id="itMail">
+              <textarea placeholder="Mensaje" name="mensaje" id="itAsunto"></textarea>
               <div id="mensaje4" class="success">
                 <i class="fas fa-check"></i>Mensaje enviado
               </div><!--"esto viene desde fontawesome.com" tambien existe flaticon.com-->
@@ -342,6 +342,41 @@
     })
 });
 
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $('#bEnviar').click(function(){
+          var nombre = $('#itNombre').val();
+          var correo = $('#itMail').val();
+          var asunto = $('#itAsunto').val();
+
+          /*Esto valida si nombre está vacío y pone el reglón en rojo con el css*/
+          if (nombre == "") {
+            $('#itNombre').css('border-bottom','2px solid red');
+            return false;
+          }else{
+            $('#itNombre').css('border-bottom', '1px solid #90CAF9');
+
+
+          if (correo == "") {
+            $('#itMail').css('border-bottom', '2px solid red');
+            return false;
+          }else{
+            $('#itMail').css('border-bottom', '1px solid #90CAF9');
+
+
+          if (asunto == "") {
+            $('#itAsunto').css('border-bottom', '2px solid red');
+            return false;
+          }
+        }
+        /*El formulario se va a enviar*/
+        $('#bEnviar').fadeOut(); /*Oculta el boton de enviar*/
+        $('#mensaje4').fadeIn();/*Muestra el mensaje4*/
+      }
+        })
+      })
     </script>
   </body>
 </html>
