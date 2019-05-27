@@ -12,19 +12,22 @@
   </head>
   <body>
     <header>
-      <div class="contenedor" id="contenedor-menu">
-        <p class="logo">DIEGO BOLAÑOS</p>
-        <nav>
-          <ul>
-            <li>Sobre mí</li>
-            <li>Servicios</li>
-            <li>Mis trabajos</li>
-            <li>¿Por qué trabajar conmigo?</li>
-            <li>Blog</li>
-            <li>Contacto</li>
-          </ul>
-        </nav>
+      <div class="menu">
+        <div class="contenedor" id="contenedor-menu">
+          <p class="logo">DIEGO BOLAÑOS</p>
+          <nav>
+            <ul>
+              <li>Sobre mí</li>
+              <li>Servicios</li>
+              <li>Mis trabajos</li>
+              <li>¿Por qué trabajar conmigo?</li>
+              <li>Blog</li>
+              <li>Contacto</li>
+            </ul>
+          </nav>
+        </div>
       </div>
+
 
       <div class="contenedor">
         <div class="contenedor-titulo">
@@ -40,6 +43,9 @@
     </header>
 
     <main>
+      <a href="https://api.whatsapp.com/send?phone=50684920222">
+        <img id="whatsapp" src="imagenes/whatsapp.png" alt="">
+      </a>
       <section id="about">
         <div class="contenedor">
           <h3>Sobre mi</h3>
@@ -275,19 +281,19 @@
 
       <section id="cta">
         <div class="contenedor">
-          <h3>¿Qué estperas para tener tu página web?</h3>
+          <h3>¿Qué esperas para tener tu página web?</h3>
           <a href="#">HABLEMOS</a>
         </div>
       </section>
 
       <section id="contacto">
         <?php
-          if(@S_GET['i'] == 'ok') {?>
+          if(@$_GET['i'] == 'ok') {?>
             <h3>La consulta se envio correctamente. Le contactaré a la mayor brevedad posible</h3>
-            ?<?php
+            <?php
           } else {
             // code...
-          } ?>
+          //} ?>
           <div class="contenedor">
             <h3>Contacto</h3>
             <form class="form" action="mienvio_formulario.php" method="post" enctype="multipart/form-data">
@@ -295,11 +301,11 @@
               <input placeholder="Email" type="email" name="email" id="itMail">
               <textarea placeholder="Mensaje" name="mensaje" id="itAsunto"></textarea>
               <div id="mensaje4" class="success">
-                <i class="fas fa-check"></i>Mensaje enviado
+                <i class="fas fa-check">Mensaje enviado</i>
               </div><!--"esto viene desde fontawesome.com" tambien existe flaticon.com-->
               <input type="submit" id="bEnviar" value="Pedir Presupuesto">
             </form>
-            <?php  ?>
+          <?php } ?>
 
             <div class="contacto-info">
               <div class="mail">
@@ -314,6 +320,28 @@
           </div>
       </section>
     </main>
+
+    <footer>
+      <section id="socialmedia">
+        <div class="contenedor">
+          <div class="redes">
+            <a href="#"><img src="imagenes/facebook.png" alt=""></a>
+
+            <a href="http://github.com/diegobolzel"><img src="imagenes/github.png" alt=""></a>
+
+            <a href="https://www.linkedin.com/in/diego-bola%C3%B1os-92187710b/"><img src="imagenes/linkedin.png" alt=""></a>
+
+            <a href="#"><img src="imagenes/medium.png" alt=""></a>
+          </div>
+
+          <div class="parrafo">
+            <p>© 2019 Diego Bolaños | Diseñador Web Costa Rica. Todos los derechos reservados</p>
+
+          </div>
+        </div>
+
+      </section>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="owl/owl.carousel.min.js">
@@ -377,6 +405,10 @@
       }
         })
       })
+    </script>
+
+    <script src="js/script.js">
+
     </script>
   </body>
 </html>
