@@ -17,12 +17,12 @@
           <p class="logo">DIEGO BOLAÑOS</p>
           <nav>
             <ul>
-              <li>Sobre mí</li>
-              <li>Servicios</li>
-              <li>Mis trabajos</li>
-              <li>¿Por qué trabajar conmigo?</li>
-              <li>Blog</li>
-              <li>Contacto</li>
+              <li><a href="#about">Sobre mí</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#trabajos">Mis trabajos</a></li>
+              <li><a href="#trabajar-conmigo">¿Por qué trabajar conmigo?</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contacto">Contacto</a></li>
             </ul>
           </nav>
         </div>
@@ -34,7 +34,7 @@
           <div class="titulo">
             <h1>Diego Bolaños</h1>
             <h2>Diseñador & Desarrollador Web</h2>
-            <a href="#">Ver mis trabajos</a>
+            <a href="#trabajos">Ver mis trabajos</a>
 
           </div>
 
@@ -57,7 +57,7 @@
               <p>Mi nombre es Diego Bolaños y soy diseñador de páginas web. Tengo la experiencia en desarrollo de sitios web para pequeñas y medianas empresas, hasta tiendas en línea con carrito de compras.</p>
 						  <p>Me aseguro de utilizar siempre las últimas tecnologías de desarrollo web: HTML5, CSS3, jQuery, Wordpress. Si necesitás <span> una página web moderna, funcional, que se adapte a todos los diferentes tipos de pantalla</span>, te aseguro que llegaste al lugar correcto.</p>
 						  <p>Podes ponerte en contacto conmigo a través de Facebook, Linkedin o completando el formulario de contacto que se encuentra al final de mi sitio web.</p>
-						  <a href="#">Ver mis trabajos</a>
+						  <a href="#trabajos">Ver mis trabajos</a>
 
             </div>
 
