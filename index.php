@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="owl/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="wow/animate.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title></title>
   </head>
   <body>
+    <div class="fakeLoader"></div>
     <header>
       <div class="menu">
         <div class="contenedor" id="contenedor-menu">
@@ -53,7 +56,7 @@
             <div class="about-img">
               <img src="imagenes/about.png">
             </div>
-            <div class="about-text">
+            <div class="about-text wow bounceInUp">
               <p>Mi nombre es Diego Bolaños y soy diseñador de páginas web. Tengo la experiencia en desarrollo de sitios web para pequeñas y medianas empresas, hasta tiendas en línea con carrito de compras.</p>
 						  <p>Me aseguro de utilizar siempre las últimas tecnologías de desarrollo web: HTML5, CSS3, jQuery, Wordpress. Si necesitás <span> una página web moderna, funcional, que se adapte a todos los diferentes tipos de pantalla</span>, te aseguro que llegaste al lugar correcto.</p>
 						  <p>Podes ponerte en contacto conmigo a través de Facebook, Linkedin o completando el formulario de contacto que se encuentra al final de mi sitio web.</p>
@@ -407,8 +410,20 @@
       })
     </script>
 
-    <script src="js/script.js">
-
-    </script>
+    <script src="js/script.js"></script>
+    <script src="wow/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+    <script src="js/fakeLoader.min.js"></script>
+    <script>
+    $(document).ready(function(){
+                 $(".fakeloader").fakeLoader({
+                     timeToHide:2200,
+                     bgColor:"#0387d1",
+                     spinner:"spinner2"
+                 });
+             });
+            </script>
   </body>
 </html>

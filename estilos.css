@@ -546,3 +546,34 @@ footer p{
   top: 80%;
   right: 2%;
 }
+
+/*.owl-carousel .owl-dots.disabled,*/
+.owl-carousel .owl-nav.disabled {
+
+display: block !important;
+
+}
+
+/*Responsive: se aplica estos efectos solo si el ancho de la pantalla es menor a 800*/
+@media screen and (max-width:800px){
+  .titulo h1 {
+    font-size: 32px;
+  }
+
+  .titulo h2{
+    margin-bottom: 40px;
+    font-size: 17px;
+  }
+
+  #about .contenido{
+    flex-direction: column;
+  }
+
+  #about img{
+    width: 100%;
+  }
+
+  #about .about-text{
+    width: 100%;
+  }
+}
