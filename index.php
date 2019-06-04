@@ -18,6 +18,7 @@
       <div class="menu">
         <div class="contenedor" id="contenedor-menu">
           <p class="logo">DIEGO BOLAÑOS</p>
+          <img src="imagenes/menu.png" class="menu-icon"alt="">
           <nav>
             <ul>
               <li><a href="#about">Sobre mí</a></li>

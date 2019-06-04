@@ -18,7 +18,7 @@ body{
 header{
   height: 100vh;
   /*Esta linea hace que cargue una imagen de fondo y le mete degradado celeste, ademas hace que no se repita.*/
-  background: linear-gradient(rgba(84,93,220,.9),rgba(96,171,245,.9)),url(imagenes/fondo-home.jpg) left no-repeat;
+  background: linear-gradient(rgba(84,93,220,.9),rgba(96,171,245,.9)),url(imagenes/fondo-home-1.jpg) left no-repeat;
   /*Esto adapta la foto al tamano del fondo*/
   background-size: cover;
   margin-top: -145px;
@@ -29,6 +29,10 @@ header{
   width: 100%;
   transition: .3s;
   z-index: 999; /*Esto hace que este elemento esté sobre todo, siempre al frente de lo que sea*/
+}
+
+.menu-icon{
+  display: none;
 }
 
 .shadow {
@@ -576,4 +580,139 @@ display: block !important;
   #about .about-text{
     width: 100%;
   }
+
+  .contenedor-servicios{
+    flex-direction: column;
+  }
+  .contenedor-servicios .servicio{
+    width: 82%;
+    padding: 34px 30px 46px 30px;
+  }
+
+  .contenedor-servicios .icono{
+    margin-top: 27px;
+  }
+
+  #trabajar-conmigo h3, #hosting h3{
+    font-size: 34px;
+  }
+
+  #trabajar-conmigo .contenedor-trabajar {
+    flex-direction: column;
+  }
+  #trabajar-conmigo .item ul{
+    padding: 0;
+  }
+
+  #trabajar-conmigo .item {
+    width: 100%;
+  }
+
+  #wordpress h3 {
+    font-size: 30px;
+  }
+
+  #wordpress .contenedor-wordpress{
+    flex-direction: column;
+  }
+
+  #wordpress img {
+    width: 100%;
+  }
+
+  #wordpress .wordpress-texto{
+    width: 100%;
+  }
+
+  #hosting p{
+    width: 100%;
+  }
+
+  #hosting .contenedor-info{
+    flex-direction: column;
+  }
+
+  #hosting .contenedor-info .info{
+    width: 100%;
+  }
+  #blog .contenido{
+    flex-direction: column;
+  }
+
+  #blog .contenido .blog-single{
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  #contacto .form{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  input[type="text"], input[type="email"] {
+    width: 100%;
+  }
+
+  .contacto-info{
+    flex-direction: column;
+  }
+  .mail {
+    margin-bottom: 20px;
+  }
+
+  footer img{
+    margin: 0 20px;
+  }
+
+  .menu-icon {
+    display: block;
+    float: right;
+    padding-bottom: 20px;
+    margin-top: 17px;
+
+  }
+
+  header nav{
+    position: absolute;
+    top: 83px;
+    left: 0;
+    height: 268px;
+    background: #5cb8ff;
+    width: 100%;
+    display: none;
+  }
+
+  header nav ul{
+    flex-direction: column;
+  }
+
+  header nav ul li{
+    margin-bottom: 15px;
+
+  }
+
+  .success{
+    right: 17%;
+    /*display: block;*/
+  }
+}
+
+/*Define los estilos para visualizacion en tablet*/
+@media screen and (min-width:500px) and (max-width:800px){
+  header {
+    margin-top: -185px;
+    height: 61vh; /*Esto define la altura del header*/
+  }
+  .contenedor-servicios .servicio{
+    width: 50%; /*para que no abarque todo el ancho*/
+    margin: auto; /*Para centrar los div*/
+    margin-bottom: 60px; /*para separar las cajas*/
+    }
+
+  #blog .contenido .blog-single{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
 }
